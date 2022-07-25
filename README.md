@@ -23,7 +23,7 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 docker run \
     --rm -i -w "$dir" -v "$dir:$dir" \
     -e NO_DESTROY \
-    axetrading/terraform-test-image:latest test/check.py
+    ghcr.io/axetrading/terraform-test-image:latest test/check.py
 ```
 
 The `NO_DESTROY` environment variable can be set to stop the resources being
