@@ -24,7 +24,9 @@ python3 "$check_script"
 exit_status=$?
 set -e
 
-terraform $TF_GLOBAL_ARGS apply -destroy -auto-approve
+if [ -z "$NO_DESTROY" ]; then
+    terraform $TF_GLOBAL_ARGS apply -destroy -auto-approve
+fi
 
 if [ "$exit_status" -ne "0" ]; then
     echo >&2
