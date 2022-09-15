@@ -27,7 +27,7 @@ docker run \
 ```
 
 The `NO_DESTROY` environment variable can be set to stop the resources being
-destroyed while you are iterating on the infrastructure/testss:
+destroyed while you are iterating on the infrastructure/tests:
 
 ```shell
 NO_DESTROY=1 ./test.sh
